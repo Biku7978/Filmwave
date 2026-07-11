@@ -3,17 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FilmWave</title>
+<title>FilmWave - Discover Movies</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<h1>🎬 FilmWave</h1>
-<input type="text" id="search" placeholder="Search Movies...">
+<header class="header">
+  <div class="logo">🎬 FilmWave</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Movies</a>
+    <a href="#">Series</a>
+    <a href="#">Trending</a>
+  </nav>
+
+  <input
+    type="text"
+    id="search"
+    placeholder="Search Movies..."
+  >
 </header>
 
-<div id="movies"></div>
+<section class="hero">
+  <h1>Welcome to FilmWave</h1>
+  <p>Search your favourite movies with IMDb ratings and posters.</p>
+</section>
+
+<section class="container">
+  <h2>Popular Movies</h2>
+  <div id="movies"></div>
+</section>
+
+<footer>
+  <p>© 2026 FilmWave. All Rights Reserved.</p>
+</footer>
 
 <script src="script.js"></script>
 
