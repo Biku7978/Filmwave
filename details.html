@@ -1,9 +1,17 @@
-<video id="moviePlayer" controls width="100%">
-  <source src="" type="video/mp4">
-</video>
-<a id="downloadBtn" href="" download>Download Movie</a>
 
-<script>
-    // URL se ID lekar video load karne ka logic yahan aayega
-</script>
+// URL se movie ID fetch karein
+const urlParams = new URLSearchParams(window.location.search);
+const movieId = urlParams.get('id');
 
+// movies.json se data load karein
+fetch('movies.json')
+    .then(response => response.json())
+    .then(data => {
+        // Sahi movie dhoondein
+        const movie = data.find(m => m.id == movieId);
+        
+        if (movie) {
+            document.getElementById('moviePlayer').src = movie.videoUrl;
+            document.getElementById('downloadBtn').href = movie.videoUrl;
+        }
+    });
