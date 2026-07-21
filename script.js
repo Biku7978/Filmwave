@@ -1,4 +1,4 @@
-const API_KEY = "=68a6d6";
+const API_KEY = "68a6d6";
 
 const movies = document.getElementById("movies");
 
