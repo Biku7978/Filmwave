@@ -1,33 +1,29 @@
-const API_KEY = "YOUR_API_KEY";
-
-async function searchMovie(){
-
-    let name = document.getElementById("search").value;
-
-    let url = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${name}`;
-
-    let response = await fetch(url);
-    let data = await response.json();
-
-    let movies = document.getElementById("movies");
-
-    movies.innerHTML = "";
-
-    if(data.Search){
-
-        data.Search.forEach(movie => {
-
-            movies.innerHTML += `
-            <div class="movie">
-                <img src="${movie.Poster}">
-                <h3>${movie.Title}</h3>
-                <p>${movie.Year}</p>
-            </div>
-            `;
-
-        });
-
-    }else{
-        movies.innerHTML = "<h2>Movie Not Found</h2>";
-    }
+const movies = [
+{
+title:"Avengers Endgame",
+year:"2019",
+image:"https://m.media-amazon.com/images/I/81ExhpBEbHL.jpg"
+},
+{
+title:"KGF Chapter 2",
+year:"2022",
+image:"https://m.media-amazon.com/images/I/71QZ8z9wKRL.jpg"
+},
+{
+title:"RRR",
+year:"2022",
+image:"https://m.media-amazon.com/images/I/81lE8J5YQ-L.jpg"
 }
+];
+
+let box = document.getElementById("movies");
+
+movies.forEach(movie=>{
+box.innerHTML += `
+<div class="movie">
+<img src="${movie.image}">
+<h3>${movie.title}</h3>
+<p>${movie.year}</p>
+</div>
+`;
+});
