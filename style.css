@@ -100,3 +100,17 @@ button{
     margin-top:10px;
     font-size:18px;
 }
+
+.categories{
+    text-align:center;
+    padding:15px;
+}
+
+.categories button{
+    margin:5px;
+    background:#e50914;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:20px;
+}
