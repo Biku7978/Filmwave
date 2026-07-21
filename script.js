@@ -1,27 +1,28 @@
-const API_KEY = "wm_zOtt5ZItPRmx7G1EcoMd9tNIkq4HOC-6OPNwgbJ7sfc"
+async function loadShows(){
 
-async function loadMovies(){
+const response = await fetch("https://api.tvmaze.com/shows");
+const shows = await response.json();
 
-    const url = `https://api.watchmode.com/v1/list-titles/?apiKey=${API_KEY}&types=movie&limit=10`;
+let box = document.getElementById("movies");
 
-    const response = await fetch(url);
-    const data = await response.json();
+box.innerHTML = "";
 
-    let box = document.getElementById("movies");
-    box.innerHTML = "";
+shows.slice(0,20).forEach(show=>{
 
-    data.titles.forEach(movie => {
+box.innerHTML += `
+<div class="movie">
 
-        box.innerHTML += `
-        <div class="movie">
-            <img src="${movie.poster || movie.poster_url || movie.image || 'https://via.placeholder.com/300x450?text=No+Poster'}">
-            <h3>${movie.title}</h3>
-            <p>${movie.year}</p>
-        </div>
-        `;
+<img src="${show.image ? show.image.medium : 'https://via.placeholder.com/300x450'}">
 
-    });
+<h3>${show.name}</h3>
+
+<p>⭐ ${show.rating.average || "N/A"}</p>
+
+</div>
+`;
+
+});
 
 }
 
-loadMovies();
+loadShows();
