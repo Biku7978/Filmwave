@@ -18,12 +18,23 @@ image:"https://m.media-amazon.com/images/I/81lE8J5YQ-L.jpg"
 
 let box = document.getElementById("movies");
 
-movies.forEach(movie=>{
+movies.forEach(movie => {
+
 box.innerHTML += `
-<div class="movie">
+<div class="movie" onclick="openMovie()">
+
 <img src="${movie.image}">
+
 <h3>${movie.title}</h3>
+
 <p>${movie.year}</p>
+
 </div>
 `;
+
 });
+
+
+function openMovie(){
+    window.location.href="movie.html";
+}
