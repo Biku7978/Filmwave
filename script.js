@@ -14,7 +14,7 @@ async function loadMovies(){
 
         box.innerHTML += `
         <div class="movie">
-            <img src="${movie.poster_url || 'https://via.placeholder.com/300x450?text=No+Poster'}">
+            <img src="${movie.poster || movie.poster_url || movie.image || 'https://via.placeholder.com/300x450?text=No+Poster'}">
             <h3>${movie.title}</h3>
             <p>${movie.year}</p>
         </div>
