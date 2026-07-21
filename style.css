@@ -114,3 +114,41 @@ button{
     padding:10px 15px;
     border-radius:20px;
 }
+
+.movie-detail{
+    display:flex;
+    gap:30px;
+    padding:30px;
+    align-items:center;
+}
+
+.movie-detail img{
+    width:250px;
+    border-radius:15px;
+}
+
+.movie-detail h1{
+    color:red;
+    margin-bottom:15px;
+}
+
+.movie-detail p{
+    line-height:1.6;
+    color:#ccc;
+}
+
+.movie-detail button{
+    margin-top:15px;
+    padding:12px 20px;
+    background:red;
+    color:white;
+    border:none;
+    border-radius:8px;
+}
+
+@media(max-width:600px){
+    .movie-detail{
+        flex-direction:column;
+        text-align:center;
+    }
+}
