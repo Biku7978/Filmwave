@@ -75,3 +75,28 @@ button{
     margin:10px;
     color:#aaa;
 }
+
+.movie{
+    background:#1c1c1c;
+    padding:12px;
+    border-radius:12px;
+    text-align:center;
+    transition:0.3s;
+    overflow:hidden;
+}
+
+.movie:hover{
+    transform:scale(1.05);
+}
+
+.movie img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.movie h3{
+    margin-top:10px;
+    font-size:18px;
+}
