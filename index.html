@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Filmwave - Watch Movies</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FilmWave - Movies</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Filmwave</h1>
-    <div id="movieGrid"></div>
-    <script src="script.js"></script>
+
+<header>
+    <h1>🎬 FilmWave</h1>
+    <input type="text" id="search" placeholder="Search Movie...">
+    <button onclick="searchMovie()">Search</button>
+</header>
+
+<div id="movies"></div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
