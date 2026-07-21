@@ -3,39 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>FilmWave - Movies</title>
+<title>FilmWave - Watch Movies</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header class="top">
-    <div class="logo">
-        🎬 <span>FilmWave</span>
-    </div>
+<header class="navbar">
 
-    <p>Watch Movies & Explore Entertainment</p>
-
-    <div class="search-box">
-        <input type="text" id="search" placeholder="Search Movie...">
-        <button onclick="searchMovie()">Search</button>
-    </div>
-</header>
-<div class="categories">
-    <button>Action</button>
-    <button>Comedy</button>
-    <button>Horror</button>
-    <button>Romance</button>
+<div class="logo">
+🎬 FilmWave
 </div>
-<section class="banner">
-    <h1>Welcome to FilmWave</h1>
-    <p>Watch your favorite movies anytime</p>
-    <button>Explore Movies</button>
+
+<div class="search-box">
+<input
+type="text"
+id="search"
+placeholder="Search Movies..."
+>
+
+<button onclick="searchMovie()">
+Search
+</button>
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>Unlimited Movies & TV Shows</h1>
+
+<p>
+Search thousands of Movies instantly.
+</p>
+
 </section>
-<h2 class="section-title">🔥 Trending Movies</h2>
-<div id="movies"></div>
+
+<h2 class="heading">
+🔥 Trending Movies
+</h2>
+
+<div id="movies" class="movie-grid">
+
+</div>
 
 <script src="script.js"></script>
 
