@@ -1,38 +1,61 @@
 const API_KEY = "68a6d6";
 
-const movies = document.getElementById("movies");
+const movieBox = document.getElementById("movies");
 
-async function loadMovies(query = "Avengers") {
-  try {
-    const res = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${query}`);
-    const data = await res.json();
+async function loadMovies(search = "Avengers") {
 
-    movies.innerHTML = "";
+    movieBox.innerHTML = "<h2>Loading...</h2>";
+
+    const response = await fetch(
+        `https://www.omdbapi.com/?apikey=${API_KEY}&s=${search}`
+    );
+
+    const data = await response.json();
+
+    movieBox.innerHTML = "";
 
     if (data.Response === "True") {
-      data.Search.forEach(movie => {
-        movies.innerHTML += `
-          <div class="movie">
-            <img src="${movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450?text=No+Poster"}">
+
+        data.Search.forEach(movie => {
+
+            movieBox.innerHTML += `
+            <div class="movie">
+
+            <img src="${movie.Poster}" alt="${movie.Title}">
+
             <h3>${movie.Title}</h3>
+
             <p>${movie.Year}</p>
-          </div>
-        `;
-      });
+
+            </div>
+            `;
+
+        });
+
     } else {
-      movies.innerHTML = `<h2>${data.Error}</h2>`;
+
+        movieBox.innerHTML = `
+        <h2>No Movies Found</h2>
+        `;
+
     }
-  } catch (e) {
-    movies.innerHTML = "<h2>Failed to load movies.</h2>";
-    console.error(e);
-  }
+
 }
 
-function searchMovie() {
-  const q = document.getElementById("search").value.trim();
-  if (q) {
-    loadMovies(q);
-  }
+function searchMovie(){
+
+    const value = document.getElementById("search").value;
+
+    if(value.trim()==""){
+
+        loadMovies();
+
+    }else{
+
+        loadMovies(value);
+
+    }
+
 }
 
 loadMovies();
