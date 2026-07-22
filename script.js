@@ -8,9 +8,7 @@ async function loadMovies(search = "Avengers") {
 
     movieBox.innerHTML = "<h2>Loading...</h2>";
 
-    const response = await fetch(
-        `https://www.omdbapi.com/?apikey=${API_KEY}&s=${search}`
-    );
+    const response = await fetch(`/api/movie?s=${encodeURIComponent(search)}`);
 
     const data = await response.json();
 
