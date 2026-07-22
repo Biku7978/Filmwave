@@ -15,8 +15,16 @@ async function loadMovies(search = "Avengers") {
     const data = await response.json();
 
     movieBox.innerHTML += `
-<div class="movie">
+<div class="movie" onclick="openMovie('${movie.imdbID}')">
 
+<img src="${movie.Poster}" alt="${movie.Title}">
+
+<h3>${movie.Title}</h3>
+
+<p>${movie.Year}</p>
+
+</div>
+`;
 <img src="${movie.Poster}" alt="${movie.Title}">
 
 <h3>${movie.Title}</h3>
