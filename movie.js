@@ -1,13 +1,9 @@
-const API_KEY = "68a6d6";
-
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
 async function loadMovie() {
 
-    const response = await fetch(
-        `https://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`
-    );
+    const response = await fetch(`/api/movie?i=${id}`);
 
     const movie = await response.json();
 
