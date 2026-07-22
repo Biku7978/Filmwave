@@ -1,25 +1,72 @@
-POST https://porn-xnxx-api.p.rapidapi.com/batch-download HTTP/1.1
-access-control-allow-credentials: true
-access-control-allow-origin: *
-cache-control: public, max-age=0, must-revalidate
-content-length: 1366
-content-type: application/json
-date: Wed, 22 Jul 2026 10:43:46 GMT
-server: RapidAPI-0.0.30
-strict-transport-security: max-age=63072000; includeSubDomains; preload
-vary: Accept-Encoding
-x-content-type-options: nosniff
-x-frame-options: DENY
-x-rapidapi-region: AWS - ap-southeast-1
-x-rapidapi-request-id: 46178f055ab1294256f97f64c4bd34225c755119b265e596ce718fe568974f4a
-x-rapidapi-version: 0.0.30
-x-ratelimit-rapid-free-plans-hard-limit-limit: 500000
-x-ratelimit-rapid-free-plans-hard-limit-remaining: 499999
-x-ratelimit-rapid-free-plans-hard-limit-reset: 2678310
-x-ratelimit-requests-limit: 100
-x-ratelimit-requests-remaining: 99
-x-ratelimit-requests-reset: 2678310
-x-vercel-cache: MISS
-x-vercel-id: sin1::iad1::scx2t-1784717024121-19604ed1158c
-specificMethodHeaders: [object Object]
-{"video_links":["https://xnxx.com/video-1egioz10/hot_sex_with_a_cat_girl","https://xnxx.com/video-w5us738/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FilmWave - Watch Movies</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+🎬 FilmWave
+</div>
+
+<div class="search-box">
+<input
+type="text"
+id="search"
+placeholder="Search Movies..."
+>
+
+<button onclick="searchMovie()">
+Search
+</button>
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>Unlimited Movies & TV Shows</h1>
+
+<p>
+Search thousands of Movies instantly.
+</p>
+
+</section>
+
+<h2 class="heading">
+🔥 Trending Movies
+</h2>
+
+<div id="movies" class="movie-grid">
+
+</div>
+<div id="movieModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <iframe
+      id="youtubePlayer"
+      width="100%"
+      height="450"
+      src=""
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
