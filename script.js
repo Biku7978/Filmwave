@@ -1,4 +1,4 @@
-const OMDB_API = "APNI_OMDB_API_KEY";
+const RAPILIT_API = "0179e9c479msh7e52d9e30c3a94ep1a6e7cjsn76aae5030936";
 const YOUTUBE_API = "AIzaSyAMwarFCu8EnDSlIdqKVAPDnNnFvP2CMg4";
 
 const movieBox = document.getElementById("movies");
