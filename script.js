@@ -1,5 +1,5 @@
 const OMDB_API = "APNI_OMDB_API_KEY";
-const YOUTUBE_API = "APNI_YOUTUBE_API_KEY";
+const YOUTUBE_API = "AIzaSyAMwarFCu8EnDSlIdqKVAPDnNnFvP2CMg4";
 const API_KEY = "68a6d6";
 
 const movieBox = document.getElementById("movies");
