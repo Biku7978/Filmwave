@@ -1,3 +1,5 @@
+const OMDB_API = "APNI_OMDB_API_KEY";
+const YOUTUBE_API = "APNI_YOUTUBE_API_KEY";
 const API_KEY = "68a6d6";
 
 const movieBox = document.getElementById("movies");
@@ -12,22 +14,21 @@ async function loadMovies(search = "Avengers") {
 
     const data = await response.json();
 
-    movieBox.innerHTML = "";
+    movieBox.innerHTML += `
+<div class="movie">
 
-    if (data.Response === "True") {
+<img src="${movie.Poster}" alt="${movie.Title}">
 
-        data.Search.forEach(movie => {
+<h3>${movie.Title}</h3>
 
-            movieBox.innerHTML += `
-            <div class="movie">
+<p>${movie.Year}</p>
 
-            <img src="${movie.Poster}" alt="${movie.Title}">
+<button onclick="watchTrailer('${movie.Title}')">
+▶ Watch Trailer
+</button>
 
-            <h3>${movie.Title}</h3>
-
-            <p>${movie.Year}</p>
-
-            </div>
+</div>
+`;
             `;
 
         });
@@ -59,3 +60,10 @@ function searchMovie(){
 }
 
 loadMovies();
+function watchTrailer(title) {
+    const query = encodeURIComponent(title + " official trailer");
+    window.open(
+        `https://www.youtube.com/results?search_query=${query}`,
+        "_blank"
+    );
+}
