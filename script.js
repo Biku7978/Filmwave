@@ -76,3 +76,7 @@ function watchTrailer(title) {
         "_blank"
     );
 }
+
+function openMovie(id){
+    window.location.href = "movie.html?id=" + id;
+}
