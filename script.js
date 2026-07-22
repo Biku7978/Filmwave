@@ -21,7 +21,7 @@ async function loadMovies(search = "Avengers") {
 
 <h3>${movie.Title}</h3>
 
-<p>${movie.Year}</p>
+<p>📅 ${movie.Year}</p>
 
 </div>
 `;
