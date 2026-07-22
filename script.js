@@ -25,6 +25,7 @@ async function loadMovies(search = "Avengers") {
 
 </div>
 `;
+`;
 <img src="${movie.Poster}" alt="${movie.Title}">
 
 <h3>${movie.Title}</h3>
